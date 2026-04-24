@@ -18,7 +18,7 @@ resource searchService 'Microsoft.Search/searchServices@2025-05-01' = {
     type: 'SystemAssigned'
   }
   properties: {
-    hostingMode: 'default'
+    hostingMode: 'Default'
     publicNetworkAccess: 'enabled'
     replicaCount: 1
     partitionCount: 1

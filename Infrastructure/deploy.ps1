@@ -7,7 +7,7 @@ param(
     [string]$SubscriptionId,
 
     [Parameter(Mandatory = $false)]
-    [string]$ResourceGroupName = "rg-soft-eng-gen-ai-prod",
+    [string]$ResourceGroupName = "rg-soft-eng-gen-ai-AiBootcamp",
 
     [Parameter(Mandatory = $false)]
     [string]$Location = "canadacentral",

@@ -4,7 +4,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $false)]
-    [string]$SubscriptionId,
+    [string]$SubscriptionId = "dfeab144-04e8-484d-9a10-f69a6c606451",
 
     [Parameter(Mandatory = $false)]
     [string]$ResourceGroupName = "rg-soft-eng-gen-ai-AiBootcamp",

@@ -156,20 +156,6 @@ module storageRoleAssignmentsModule 'modules/storage-role-assignments.bicep' = {
 }
 
 // =====================================
-// Module: AI Search Role Assignments
-// =====================================
-module aiSearchRoleAssignmentsModule 'modules/ai-search-role-assignments.bicep' = {
-  name: 'aiSearchRoleAssignmentsDeployment'
-  params: {
-    rootName: rootName
-    foundryProjectPrincipalId: aiFoundryModule.outputs.aiFoundryProjectPrincipalId
-    batchManagedIdentityPrincipalId: containerAppsIdentitiesModule.outputs.batchManagedIdentityPrincipalId
-    tourGuideManagedIdentityPrincipalId: containerAppsIdentitiesModule.outputs.tourGuideManagedIdentityPrincipalId
-    mcpTourGuideManagedIdentityPrincipalId: containerAppsIdentitiesModule.outputs.mcpTourGuideManagedIdentityPrincipalId
-  }
-}
-
-// =====================================
 // Outputs
 // =====================================
 output resourceGroupName string = resourceGroup().name

@@ -25,3 +25,4 @@ dist-ssr
 
 # Local infrastructure secrets
 Infrastructure/main.bicepparam
+Infrastructure/deploy.ps1

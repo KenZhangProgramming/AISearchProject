@@ -1,0 +1,21 @@
+{
+  "name": "trip-documents-indexer",
+  "description": "Indexer for knowledge source 'trip-documents'",
+  "dataSourceName": "trip-documents-datasource",
+  "skillsetName": "trip-documents-skillset",
+  "targetIndexName": "trip-documents",
+  "disabled": false,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": -1,
+    "maxFailedItemsPerBatch": -1,
+    "configuration": {
+      "parsingMode": "default"
+    }
+  },
+  "fieldMappings": [],
+  "outputFieldMappings": [],
+  "cache": null,
+  "encryptionKey": null
+}

@@ -1,0 +1,18 @@
+{
+  "name": "trip-documents-datasource",
+  "description": null,
+  "type": "azureblob",
+  "subtype": null,
+  "indexerPermissionOptions": [],
+  "credentials": {
+    "connectionString": "ResourceId=/subscriptions/fec51923-ff31-40de-afda-56f816f0c297/resourceGroups/rg-soft-eng-gen-ai-prod/providers/Microsoft.Storage/storageAccounts/stsegenaiprod"
+  },
+  "container": {
+    "name": "travel-documents",
+    "query": null
+  },
+  "dataChangeDetectionPolicy": null,
+  "dataDeletionDetectionPolicy": null,
+  "encryptionKey": null,
+  "identity": null
+}

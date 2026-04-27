@@ -34,6 +34,7 @@ resource account 'Microsoft.CognitiveServices/accounts@2025-10-01-preview' = {
   properties: {
     allowProjectManagement: true
     customSubDomainName: 'aif-${rootName}'
+    restore: true
     networkAcls: {
       defaultAction: 'Allow'
       virtualNetworkRules: []

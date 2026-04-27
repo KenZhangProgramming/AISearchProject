@@ -143,17 +143,17 @@ resource projectConnectionSearch 'Microsoft.CognitiveServices/accounts/connectio
 
 resource projectConnectionWeekendEventsKnowledgebase 'Microsoft.CognitiveServices/accounts/projects/connections@2025-10-01-preview' = {
   parent: project
-  name: 'kb-weekend-events'
+  name: 'kb-bank-products'
   properties: {
     category: 'RemoteTool'
-    target: 'https://${searchService.name}.search.windows.net/knowledgebases/weekend-events/mcp?api-version=2025-11-01-Preview'
+    target: 'https://${searchService.name}.search.windows.net/knowledgebases/kb-bank-products/mcp?api-version=2025-11-01-Preview'
     #disable-next-line BCP036
     authType: 'ProjectManagedIdentity'
     audience: 'https://search.azure.com/'
     isSharedToAll: true
     metadata: {
       type: 'knowledgeBase_MCP'
-      knowledgeBaseName: 'weekend-events'
+      knowledgeBaseName: 'kb-bank-products'
     }
   }
 }

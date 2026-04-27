@@ -34,7 +34,6 @@ resource account 'Microsoft.CognitiveServices/accounts@2025-10-01-preview' = {
   properties: {
     allowProjectManagement: true
     customSubDomainName: 'aif-${rootName}'
-    restore: true
     networkAcls: {
       defaultAction: 'Allow'
       virtualNetworkRules: []
@@ -143,17 +142,17 @@ resource projectConnectionSearch 'Microsoft.CognitiveServices/accounts/connectio
 
 resource projectConnectionWeekendEventsKnowledgebase 'Microsoft.CognitiveServices/accounts/projects/connections@2025-10-01-preview' = {
   parent: project
-  name: 'kb-bank-products'
+  name: 'kb-weekend-events'
   properties: {
     category: 'RemoteTool'
-    target: 'https://${searchService.name}.search.windows.net/knowledgebases/kb-bank-products/mcp?api-version=2025-11-01-Preview'
+    target: 'https://${searchService.name}.search.windows.net/knowledgebases/weekend-events/mcp?api-version=2025-11-01-Preview'
     #disable-next-line BCP036
     authType: 'ProjectManagedIdentity'
     audience: 'https://search.azure.com/'
     isSharedToAll: true
     metadata: {
       type: 'knowledgeBase_MCP'
-      knowledgeBaseName: 'kb-bank-products'
+      knowledgeBaseName: 'weekend-events'
     }
   }
 }

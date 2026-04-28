@@ -82,14 +82,14 @@ resource embeddingDeployment 'Microsoft.CognitiveServices/accounts/deployments@2
   properties: {
     model: {
       format: 'OpenAI'
-      name: 'text-embedding-3-small'
+      name: 'text-embedding-3-large'
       version: '1'
     }
     raiPolicyName: 'Microsoft.DefaultV2'
   }
   sku: {
     name: 'GlobalStandard'
-    capacity: 2
+    capacity: 998
   }
 }
 

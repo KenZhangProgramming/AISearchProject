@@ -1,14 +1,14 @@
 {
-  "name": "trip-documents-datasource",
+  "name": "bank-documents-datasource",
   "description": null,
   "type": "azureblob",
   "subtype": null,
   "indexerPermissionOptions": [],
   "credentials": {
-    "connectionString": "ResourceId=/subscriptions/fec51923-ff31-40de-afda-56f816f0c297/resourceGroups/rg-soft-eng-gen-ai-prod/providers/Microsoft.Storage/storageAccounts/stsegenaiprod"
+    "connectionString": "ResourceId=/subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.Storage/storageAccounts/stsegenaiken"
   },
   "container": {
-    "name": "travel-documents",
+    "name": "bank-documents",
     "query": null
   },
   "dataChangeDetectionPolicy": null,

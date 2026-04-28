@@ -43,27 +43,9 @@ resource blobServices 'Microsoft.Storage/storageAccounts/blobServices@2023-05-01
 }
 
 // Travel Itineraries Container
-resource travelItinerariesContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-05-01' = {
+resource bankDocumentsContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-05-01' = {
   parent: blobServices
-  name: 'travel-itineraries'
-  properties: {
-    publicAccess: 'None'
-  }
-}
-
-// Travel Documents Container
-resource travelDocumentsContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-05-01' = {
-  parent: blobServices
-  name: 'travel-documents'
-  properties: {
-    publicAccess: 'None'
-  }
-}
-
-// Weekend Events Content Container (used by batch job)
-resource weekendEventsContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-05-01' = {
-  parent: blobServices
-  name: 'weekend-events-content'
+  name: 'bank-documents'
   properties: {
     publicAccess: 'None'
   }

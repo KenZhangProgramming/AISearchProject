@@ -1,6 +1,6 @@
 {
-  "name": "trip-documents-skillset",
-  "description": "Skillset for knowledge source 'ks-trip-documents'",
+  "name": "retirement-income-skillset",
+  "description": "Skillset for retirement income documents: split + embed",
   "skills": [
     {
       "@odata.type": "#Microsoft.Skills.Text.SplitSkill",
@@ -30,7 +30,7 @@
     {
       "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
       "name": "AzureOpenAIEmbeddingSkill",
-      "description": "Generate embeddings",
+      "description": "Generate embeddings for each chunk",
       "context": "/document/pages/*",
       "resourceUri": "https://aif-soft-eng-gen-ai-prod.openai.azure.com",
       "deploymentId": "oaidpl-soft-eng-gen-ai-prod-embedding",
@@ -54,7 +54,7 @@
   "indexProjections": {
     "selectors": [
       {
-        "targetIndexName": "trip-documents",
+        "targetIndexName": "retirement-income",
         "parentKeyFieldName": "parent_id",
         "sourceContext": "/document/pages/*",
         "mappings": [
@@ -69,13 +69,18 @@
             "inputs": []
           },
           {
-            "name": "trip_name",
-            "source": "/document/trip_name",
+            "name": "title",
+            "source": "/document/metadata_storage_name",
             "inputs": []
           },
           {
-            "name": "category",
-            "source": "/document/category",
+            "name": "topic",
+            "source": "/document/topic",
+            "inputs": []
+          },
+          {
+            "name": "document_type",
+            "source": "/document/document_type",
             "inputs": []
           }
         ]

@@ -1,9 +1,9 @@
 {
-  "name": "trip-documents-indexer",
-  "description": "Indexer for knowledge source 'trip-documents'",
-  "dataSourceName": "trip-documents-datasource",
-  "skillsetName": "trip-documents-skillset",
-  "targetIndexName": "trip-documents",
+  "name": "retirement-income-indexer",
+  "description": "Indexer for retirement income documents",
+  "dataSourceName": "retirement-income-datasource",
+  "skillsetName": "retirement-income-skillset",
+  "targetIndexName": "retirement-income",
   "disabled": false,
   "schedule": null,
   "parameters": {
@@ -11,10 +11,16 @@
     "maxFailedItems": -1,
     "maxFailedItemsPerBatch": -1,
     "configuration": {
-      "parsingMode": "default"
+      "parsingMode": "default",
+      "dataToExtract": "contentAndMetadata"
     }
   },
-  "fieldMappings": [],
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "title"
+    }
+  ],
   "outputFieldMappings": [],
   "cache": null,
   "encryptionKey": null

@@ -1,6 +1,6 @@
 {
-  "name": "trip-documents",
-  "description": "Search index for knowledge source 'trip-documents'",
+  "name": "retirement-income",
+  "description": "Search index for RBC retirement income knowledge source",
   "purviewEnabled": false,
   "fields": [
     {
@@ -29,19 +29,31 @@
       "synonymMaps": []
     },
     {
-      "name": "trip_name",
+      "name": "topic",
       "type": "Edm.String",
       "searchable": true,
       "filterable": true,
       "retrievable": true,
       "stored": true,
       "sortable": false,
-      "facetable": false,
+      "facetable": true,
       "key": false,
       "synonymMaps": []
     },
     {
-      "name": "category",
+      "name": "document_type",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": true,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "title",
       "type": "Edm.String",
       "searchable": true,
       "filterable": true,
@@ -75,7 +87,7 @@
       "facetable": false,
       "key": false,
       "dimensions": 3072,
-      "vectorSearchProfile": "trip-documents-vector-search-profile",
+      "vectorSearchProfile": "retirement-income-vector-search-profile",
       "synonymMaps": []
     }
   ],
@@ -90,19 +102,26 @@
     "@odata.type": "#Microsoft.Azure.Search.BM25Similarity"
   },
   "semantic": {
-    "defaultConfiguration": "trip-documents-semantic-configuration",
+    "defaultConfiguration": "retirement-income-semantic-configuration",
     "configurations": [
       {
-        "name": "trip-documents-semantic-configuration",
+        "name": "retirement-income-semantic-configuration",
         "flightingOptIn": false,
         "rankingOrder": "BoostedRerankerScore",
         "prioritizedFields": {
+          "titleField": {
+            "fieldName": "title"
+          },
           "prioritizedContentFields": [
             {
               "fieldName": "chunk"
             }
           ],
-          "prioritizedKeywordsFields": []
+          "prioritizedKeywordsFields": [
+            {
+              "fieldName": "topic"
+            }
+          ]
         }
       }
     ]
@@ -110,7 +129,7 @@
   "vectorSearch": {
     "algorithms": [
       {
-        "name": "trip-documents-vector-search-algorithm",
+        "name": "retirement-income-vector-search-algorithm",
         "kind": "hnsw",
         "hnswParameters": {
           "metric": "cosine",
@@ -122,15 +141,15 @@
     ],
     "profiles": [
       {
-        "name": "trip-documents-vector-search-profile",
-        "algorithm": "trip-documents-vector-search-algorithm",
-        "vectorizer": "trip-documents-vectorizer",
-        "compression": "trip-documents-vector-search-scalar-quantization"
+        "name": "retirement-income-vector-search-profile",
+        "algorithm": "retirement-income-vector-search-algorithm",
+        "vectorizer": "retirement-income-vectorizer",
+        "compression": "retirement-income-vector-search-scalar-quantization"
       }
     ],
     "vectorizers": [
       {
-        "name": "trip-documents-vectorizer",
+        "name": "retirement-income-vectorizer",
         "kind": "azureOpenAI",
         "azureOpenAIParameters": {
           "resourceUri": "https://aif-soft-eng-gen-ai-prod.openai.azure.com",
@@ -141,7 +160,7 @@
     ],
     "compressions": [
       {
-        "name": "trip-documents-vector-search-scalar-quantization",
+        "name": "retirement-income-vector-search-scalar-quantization",
         "kind": "scalarQuantization",
         "scalarQuantizationParameters": {
           "quantizedDataType": "int8"

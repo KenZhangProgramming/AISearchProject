@@ -28,12 +28,12 @@ embedding_model_params = AzureOpenAIVectorizerParameters(
 index_client = SearchIndexClient(endpoint = "{search_url}", credential = DefaultAzureCredential())
 
 knowledge_source = AzureBlobKnowledgeSource(
-    name = "ks-BankAi-searches",
+    name = "ks-bank-ai-searches",
     description = "This knowledge source pulls information about bank AI searches from a blob storage container.",
     encryption_key = None,
     azure_blob_parameters = AzureBlobKnowledgeSourceParameters(
         connection_string = "{storage_account_connection_string}",
-        container_name = "bank-ai-searches-content",
+        container_name = "bank-documents",
         folder_path = None,
         is_adls_gen2 = False,
         ingestion_parameters = KnowledgeSourceIngestionParameters(
@@ -59,7 +59,7 @@ knowledge_base = KnowledgeBase(
     description = "This knowledge base handles questions about Bank AI Search content from the configured storage source.",
     retrieval_instructions = "Use the Bank AI Search knowledge source to retrieve relevant banking AI search content.",
     knowledge_sources = [
-        KnowledgeSourceReference(name = "ks-BankAi-searches"),
+        KnowledgeSourceReference(name = "ks-bank-ai-searches"),
     ],
     models = [KnowledgeBaseAzureOpenAIModel(azure_open_ai_parameters = chat_completion_model_params)],
     encryption_key = None

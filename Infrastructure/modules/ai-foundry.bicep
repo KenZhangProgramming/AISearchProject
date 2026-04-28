@@ -64,7 +64,7 @@ resource chatDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-1
   properties: {
     model: {
       format: 'OpenAI'
-      name: 'gpt-5.4'
+      name: 'gpt-5'
       version: '2026-03-05'
     }
     raiPolicyName: 'Microsoft.DefaultV2'

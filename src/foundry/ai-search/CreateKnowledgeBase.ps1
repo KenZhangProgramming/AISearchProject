@@ -1,4 +1,4 @@
-$search_url = "https://srch-soft-eng-gen-ai-prod.search.windows.net"
+$search_url = "https://srch-soft-eng-gen-ai-ken.search.windows.net"
 $aoai_resource_url = "https://aif-soft-eng-gen-ai-prod.openai.azure.com"
 $aoai_deployment_name_chat_completion = "oaidpl-soft-eng-gen-ai-prod-chat"
 $aoai_deployment_name_embedding = "oaidpl-soft-eng-gen-ai-prod-embedding"

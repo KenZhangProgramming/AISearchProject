@@ -1,0 +1,20 @@
+Outputs:
+  resourceGroupName: rg-soft-eng-gen-ai-AiBootcamp
+  logAnalyticsWorkspaceId: /subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.OperationalInsights/workspaces/log-soft-eng-gen-ai-ken
+  appInsightsId: /subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.Insights/components/appi-soft-eng-gen-ai-ken
+  storageAccountId: /subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.Storage/storageAccounts/stsegenaiken
+  storageAccountName: stsegenaiken
+  aiFoundryId: /subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.CognitiveServices/accounts/aif-soft-eng-gen-ai-ken
+  aiFoundryName: aif-soft-eng-gen-ai-ken
+  aiFoundryProjectId: /subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.CognitiveServices/accounts/aif-soft-eng-gen-ai-ken/projects/proj-soft-eng-gen-ai-ken
+  aiFoundryProjectName: proj-soft-eng-gen-ai-ken
+  aiSearchId: /subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.Search/searchServices/srch-soft-eng-gen-ai-ken
+  aiSearchEndpoint: https://srch-soft-eng-gen-ai-ken.search.windows.net/
+
+Done!
+
+   Tenant: cf36141c-ddd7-45a7-b073-111f66d0b30c
+
+SubscriptionName           SubscriptionId                       Account                      Environment
+----------------           --------------                       -------                      -----------
+Visual Studio Professional dfeab144-04e8-484d-9a10-f69a6c606451 yukang.ken.zhang@avanade.com AzureCloud

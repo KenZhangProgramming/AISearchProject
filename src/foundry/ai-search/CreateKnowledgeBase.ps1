@@ -33,7 +33,7 @@ $content = $content -replace '{storage_account_connection_string}', $storage_acc
 Set-Content -Path $tempPyFile -Value $content -Encoding UTF8
 
 try {
-    Write-Host "Running WeekendPlanner with provided parameters..." -ForegroundColor Cyan
+    Write-Host "Running Bank Ai Search knowledge base setup with provided parameters..." -ForegroundColor Cyan
     # Prefer py if available, else python
     $pythonCmd = "python"
     $pythonVersion = (& $pythonCmd --version 2>$null)

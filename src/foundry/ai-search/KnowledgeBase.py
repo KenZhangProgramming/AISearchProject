@@ -28,12 +28,12 @@ embedding_model_params = AzureOpenAIVectorizerParameters(
 index_client = SearchIndexClient(endpoint = "{search_url}", credential = DefaultAzureCredential())
 
 knowledge_source = AzureBlobKnowledgeSource(
-    name = "ks-weekend-events",
-    description = "This knowledge source pulls information about weekend events from a blob storage container.",
+    name = "ks-BankAi-searches",
+    description = "This knowledge source pulls information about bank AI searches from a blob storage container.",
     encryption_key = None,
     azure_blob_parameters = AzureBlobKnowledgeSourceParameters(
         connection_string = "{storage_account_connection_string}",
-        container_name = "weekend-events-content",
+        container_name = "bank-ai-searches-content",
         folder_path = None,
         is_adls_gen2 = False,
         ingestion_parameters = KnowledgeSourceIngestionParameters(
@@ -55,11 +55,11 @@ index_client.create_or_update_knowledge_source(knowledge_source)
 print(f"Knowledge source '{knowledge_source.name}' created or updated successfully.")
 
 knowledge_base = KnowledgeBase(
-    name = "weekend-events",
-    description = "This knowledge base that handles questions about events in Toronto, Canada for the upcoming or ongoing weekend.",
-    retrieval_instructions = "Use the weekend events knowledge source to search for events happening in Toronto during the upcoming or ongoing weekend.",
+    name = "bank-ai-search",
+    description = "This knowledge base handles questions about Bank AI Search content from the configured storage source.",
+    retrieval_instructions = "Use the Bank AI Search knowledge source to retrieve relevant banking AI search content.",
     knowledge_sources = [
-        KnowledgeSourceReference(name = "ks-weekend-events"),
+        KnowledgeSourceReference(name = "ks-BankAi-searches"),
     ],
     models = [KnowledgeBaseAzureOpenAIModel(azure_open_ai_parameters = chat_completion_model_params)],
     encryption_key = None

@@ -1,11 +1,10 @@
 $search_url = "https://srch-soft-eng-gen-ai-ken.search.windows.net"
-$aoai_resource_url = "https://aif-soft-eng-gen-ai-prod.openai.azure.com"
-$aoai_deployment_name_chat_completion = "oaidpl-soft-eng-gen-ai-prod-chat"
-$aoai_deployment_name_embedding = "oaidpl-soft-eng-gen-ai-prod-embedding"
-$aoai_model_name_chat_completion = "gpt-5"
+$aoai_resource_url = "https://aif-soft-eng-gen-ai-ken.openai.azure.com"
+$aoai_deployment_name_chat_completion = "oaidpl-soft-eng-gen-ai-ken-chat"
+$aoai_deployment_name_embedding = "oaidpl-soft-eng-gen-ai-ken-embedding"
+$aoai_model_name_chat_completion = "gpt-5.4"
 $aoai_model_name_embedding = "text-embedding-3-large"
-$storage_account_connection_string = "ResourceId=/subscriptions/fec51923-ff31-40de-afda-56f816f0c297/resourceGroups/rg-soft-eng-gen-ai-prod/providers/Microsoft.Storage/storageAccounts/stsegenaiprod"
-
+$storage_account_connection_string    = "ResourceId=/subscriptions/dfeab144-04e8-484d-9a10-f69a6c606451/resourceGroups/rg-soft-eng-gen-ai-AiBootcamp/providers/Microsoft.Storage/storageAccounts/stsegenaiken"
 $ErrorActionPreference = "Stop"
 
 # Resolve paths

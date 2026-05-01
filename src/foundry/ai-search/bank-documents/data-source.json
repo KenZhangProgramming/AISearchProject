@@ -1,5 +1,5 @@
 {
-  "name": "bank-documents-datasource",
+  "name": "ks-bank-ai-searches-datasource",
   "description": null,
   "type": "azureblob",
   "subtype": null,

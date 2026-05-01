@@ -55,7 +55,7 @@ index_client.create_or_update_knowledge_source(knowledge_source)
 print(f"Knowledge source '{knowledge_source.name}' created or updated successfully.")
 
 knowledge_base = KnowledgeBase(
-    name = "bank-ai-search",
+    name = "kb-bank-ai-searches",
     description = "This knowledge base handles questions about Bank AI Search content from the configured storage source.",
     retrieval_instructions = "Use the Bank AI Search knowledge source to retrieve relevant banking AI search content.",
     knowledge_sources = [

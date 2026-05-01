@@ -1,6 +1,6 @@
 {
-  "name": "retirement-income-skillset",
-  "description": "Skillset for retirement income documents: split + embed",
+  "name": "ks-bank-ai-searches-skillset",
+  "description": "Skillset for bank AI search documents: split + embed",
   "skills": [
     {
       "@odata.type": "#Microsoft.Skills.Text.SplitSkill",
@@ -51,10 +51,10 @@
       ]
     }
   ],
-  "indexProjections": {
+   "indexProjections": {
     "selectors": [
       {
-        "targetIndexName": "retirement-income",
+        "targetIndexName": "ks-bank-ai-searches-index",
         "parentKeyFieldName": "parent_id",
         "sourceContext": "/document/pages/*",
         "mappings": [
@@ -70,17 +70,7 @@
           },
           {
             "name": "title",
-            "source": "/document/metadata_storage_name",
-            "inputs": []
-          },
-          {
-            "name": "topic",
-            "source": "/document/topic",
-            "inputs": []
-          },
-          {
-            "name": "document_type",
-            "source": "/document/document_type",
+            "source": "/document/title",
             "inputs": []
           }
         ]

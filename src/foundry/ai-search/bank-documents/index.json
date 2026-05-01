@@ -1,6 +1,6 @@
 {
-  "name": "retirement-income",
-  "description": "Search index for RBC retirement income knowledge source",
+  "name": "ks-bank-ai-searches-index",
+  "description": "Search index for bank AI searches knowledge source",
   "purviewEnabled": false,
   "fields": [
     {
@@ -87,7 +87,7 @@
       "facetable": false,
       "key": false,
       "dimensions": 3072,
-      "vectorSearchProfile": "retirement-income-vector-search-profile",
+      "vectorSearchProfile": "ks-bank-ai-searches-index-vector-search-profile",
       "synonymMaps": []
     }
   ],
@@ -102,10 +102,10 @@
     "@odata.type": "#Microsoft.Azure.Search.BM25Similarity"
   },
   "semantic": {
-    "defaultConfiguration": "retirement-income-semantic-configuration",
+    "defaultConfiguration": "ks-bank-ai-searches-index-semantic-configuration",
     "configurations": [
       {
-        "name": "retirement-income-semantic-configuration",
+        "name": "ks-bank-ai-searches-index-semantic-configuration",
         "flightingOptIn": false,
         "rankingOrder": "BoostedRerankerScore",
         "prioritizedFields": {
@@ -129,7 +129,7 @@
   "vectorSearch": {
     "algorithms": [
       {
-        "name": "retirement-income-vector-search-algorithm",
+        "name": "ks-bank-ai-searches-index-vector-search-algorithm",
         "kind": "hnsw",
         "hnswParameters": {
           "metric": "cosine",
@@ -141,15 +141,15 @@
     ],
     "profiles": [
       {
-        "name": "retirement-income-vector-search-profile",
-        "algorithm": "retirement-income-vector-search-algorithm",
-        "vectorizer": "retirement-income-vectorizer",
-        "compression": "retirement-income-vector-search-scalar-quantization"
+        "name": "ks-bank-ai-searches-index-vector-search-profile",
+        "algorithm": "ks-bank-ai-searches-index-vector-search-algorithm",
+        "vectorizer": "ks-bank-ai-searches-index-vectorizer",
+        "compression": "ks-bank-ai-searches-index-vector-search-scalar-quantization"
       }
     ],
     "vectorizers": [
       {
-        "name": "retirement-income-vectorizer",
+        "name": "ks-bank-ai-searches-index-vectorizer",
         "kind": "azureOpenAI",
         "azureOpenAIParameters": {
           "resourceUri": "https://aif-soft-eng-gen-ai-prod.openai.azure.com",
@@ -160,7 +160,7 @@
     ],
     "compressions": [
       {
-        "name": "retirement-income-vector-search-scalar-quantization",
+        "name": "ks-bank-ai-searches-index-vector-search-scalar-quantization",
         "kind": "scalarQuantization",
         "scalarQuantizationParameters": {
           "quantizedDataType": "int8"

@@ -1,9 +1,9 @@
 {
-  "name": "retirement-income-indexer",
-  "description": "Indexer for retirement income documents",
+  "name": "ks-bank-ai-searches-indexer",
+  "description": "Indexer for bank AI search documents",
   "dataSourceName": "bank-documents-datasource",
-  "skillsetName": "retirement-income-skillset",
-  "targetIndexName": "retirement-income",
+  "skillsetName": "ks-bank-ai-searches-skillset",
+  "targetIndexName": "ks-bank-ai-searches-index",
   "disabled": false,
   "schedule": null,
   "parameters": {

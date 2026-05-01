@@ -13,6 +13,9 @@ param storageAccountName string
 @description('Storage account blob endpoint')
 param storageAccountBlobEndpoint string
 
+@description('Restore the AI Foundry account if the name currently points to a soft-deleted resource')
+param restoreAiFoundry bool = false
+
 resource searchService 'Microsoft.Search/searchServices@2024-06-01-preview' existing = {
   name: 'srch-${rootName}'
 }
@@ -34,6 +37,9 @@ resource account 'Microsoft.CognitiveServices/accounts@2025-10-01-preview' = {
   properties: {
     allowProjectManagement: true
     customSubDomainName: 'aif-${rootName}'
+    ...(restoreAiFoundry ? {
+      restore: true
+    } : {})
     networkAcls: {
       defaultAction: 'Allow'
       virtualNetworkRules: []
@@ -64,7 +70,7 @@ resource chatDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-1
   properties: {
     model: {
       format: 'OpenAI'
-      name: 'gpt-5'
+      name: 'gpt-5.4'
       version: '2026-03-05'
     }
     raiPolicyName: 'Microsoft.DefaultV2'

@@ -1,6 +1,6 @@
 from langchain_core.documents import Document
 from langchain_core.tools import tool
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 
 from .deps import get_llm, get_vector_store
 
@@ -41,7 +41,7 @@ def search_bank_documents(query: str) -> str:
 
 
 def build_agent():
-    return create_react_agent(
+    return create_agent(
         model=get_llm(),
         tools=[search_bank_documents],
         prompt=SYSTEM_PROMPT,

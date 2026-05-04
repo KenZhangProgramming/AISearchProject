@@ -6,11 +6,13 @@ from azure.search.documents.indexes.models import (
     KnowledgeBaseAzureOpenAIModel,
     KnowledgeSourceReference,
     AzureOpenAIVectorizerParameters,
-    AzureBlobKnowledgeSource, 
+    AzureBlobKnowledgeSource,
     AzureBlobKnowledgeSourceParameters,
-    KnowledgeSourceContentExtractionMode, 
+    KnowledgeSourceContentExtractionMode,
+)
+from azure.search.documents.knowledgebases.models import (
     KnowledgeSourceIngestionParameters,
-    KnowledgeSourceAzureOpenAIVectorizer
+    KnowledgeSourceAzureOpenAIVectorizer,
 )
 
 chat_completion_model_params = AzureOpenAIVectorizerParameters(
@@ -45,8 +47,7 @@ knowledge_source = AzureBlobKnowledgeSource(
                 azure_open_ai_parameters = embedding_model_params
             ),
             content_extraction_mode = KnowledgeSourceContentExtractionMode.MINIMAL,
-            ingestion_schedule = None,
-            ingestion_permission_options = None
+            ingestion_schedule = None
         )
     )
 )
@@ -57,7 +58,6 @@ print(f"Knowledge source '{knowledge_source.name}' created or updated successful
 knowledge_base = KnowledgeBase(
     name = "kb-bank-ai-searches",
     description = "This knowledge base handles questions about Bank AI Search content from the configured storage source.",
-    retrieval_instructions = "Use the Bank AI Search knowledge source to retrieve relevant banking AI search content.",
     knowledge_sources = [
         KnowledgeSourceReference(name = "ks-bank-ai-searches"),
     ],

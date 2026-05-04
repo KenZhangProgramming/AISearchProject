@@ -1,0 +1,11 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.4
+python-dotenv>=1.0
+azure-identity>=1.19
+azure-search-documents>=11.5.2
+langchain>=0.3
+langchain-openai>=0.2
+langchain-community>=0.3
+langgraph>=0.2

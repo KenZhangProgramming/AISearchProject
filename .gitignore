@@ -26,3 +26,10 @@ dist-ssr
 # Local infrastructure secrets
 Infrastructure/main.bicepparam
 Infrastructure/deploy.ps1
+
+# Python API
+src/api/**/.env
+src/api/**/.venv/
+**/__pycache__/
+*.pyc
+

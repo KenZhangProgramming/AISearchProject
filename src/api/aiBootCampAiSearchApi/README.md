@@ -13,7 +13,7 @@ Azure AI Search knowledge base over an Azure OpenAI chat model.
 
 ## Setup
 
-From this folder (`src/api/aiBootCamp.AiSearch.Api`):
+From this folder (`src/api/aiBootCampAiSearchApi`):
 
 ```powershell
 python -m venv .venv

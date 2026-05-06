@@ -44,5 +44,5 @@ def build_agent():
     return create_agent(
         model=get_llm(),
         tools=[search_bank_documents],
-        prompt=SYSTEM_PROMPT,
+        system_prompt=SYSTEM_PROMPT,
     )

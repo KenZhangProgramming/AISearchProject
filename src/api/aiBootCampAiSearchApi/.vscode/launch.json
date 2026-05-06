@@ -7,16 +7,16 @@
       "request": "launch",
       "module": "uvicorn",
       "args": [
-        "aiBootCamp.AiSearch.Api.main:app",
+        "aiBootCampAiSearchApi.main:app",
         "--reload",
         "--port",
         "8000"
       ],
-      "cwd": "${workspaceFolder}/src/api",
+      "cwd": "${workspaceFolder}/..",
       "env": {
-        "PYTHONPATH": "${workspaceFolder}/src/api"
+        "PYTHONPATH": "${workspaceFolder}/.."
       },
-      "envFile": "${workspaceFolder}/src/api/aiBootCamp.AiSearch.Api/.env",
+      "envFile": "${workspaceFolder}/.env",
       "jinja": true,
       "justMyCode": false,
       "console": "integratedTerminal"

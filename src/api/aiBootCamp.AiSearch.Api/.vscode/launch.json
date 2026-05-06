@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: FastAPI (AiSearch.Api)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "aiBootCamp.AiSearch.Api.main:app",
+        "--reload",
+        "--port",
+        "8000"
+      ],
+      "cwd": "${workspaceFolder}/src/api",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src/api"
+      },
+      "envFile": "${workspaceFolder}/src/api/aiBootCamp.AiSearch.Api/.env",
+      "jinja": true,
+      "justMyCode": false,
+      "console": "integratedTerminal"
+    }
+  ]
+}
